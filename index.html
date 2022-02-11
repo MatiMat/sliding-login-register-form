@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Sliding Login and Register form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="./index.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="panel">
+            <div class="box box--signin">
+                <h2 class="headline">Already Have an Account?</h2>
+                <button class="btn signinBtn">Sign in</button>
+            </div>
+            <div class="box box--signup">
+                <h2 class="headline">Don't Have an Account?</h2>
+                <button class="btn signupBtn">Sign up</button>
+            </div>
+        </div>
+        <div class="form-box">
+            <div class="form-container signin-form">
+                <form class="form">
+                    <h3 class="headline headline--3">Sign In</h3>
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Username"/>
+                        <span class="validation validation--valid">
+                            Looks good!
+                        </span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input class="form-control" type="password" placeholder="Password"/>
+                        <span class="validation validation--invalid">
+                            Please type password!
+                        </span>
+                    </div>
+
+                    <input class="form-button form-button--primary" type="submit" value="Login"/>
+                    <a href="#forgot-password" class="form-anchor forgot">Forgot password</a>
+                </form>
+            </div>
+
+            <div class="form-container signup-form">
+                <form class="form">
+                    <h3 class="headline headline--3">Sign Up</h3>
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Username"/>
+                        <span class="validation validation--valid">
+                            Looks good!
+                        </span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input class="form-control" type="email" placeholder="Email Adress"/>
+                        <span class="validation validation--valid">
+                            Looks good!
+                        </span>
+                    </div>
+
+                    <div class="form-group">
+                        <input class="form-control" type="password" placeholder="Password"/>
+                        <span class="validation validation--invalid">
+                            Please type password!
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="password" placeholder="Confirm Password"/>
+                        <span class="validation validation--invalid">
+                            Please type password!
+                        </span>
+                    </div>
+
+                    <input class="form-button form-button--primary" type="submit" value="Register"/>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        const signinBtn = document.querySelector('.signinBtn');
+        const signupBtn = document.querySelector('.signupBtn');
+        const formBox = document.querySelector('.form-box');
+        const body = document.querySelector('body');
+
+        signupBtn.onclick = function() {
+            formBox.classList.add('active');
+            body.classList.add('active');
+        }
+
+        signinBtn.onclick = function() {
+            formBox.classList.remove('active');
+            body.classList.remove('active');
+        }
+    </script>
+</body>
+</html>
