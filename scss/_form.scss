@@ -1,0 +1,77 @@
+.form {
+    display: flex;
+    flex-direction: column;
+
+    .form-group {
+        display: flex;
+        margin: 8px 0;
+        flex-direction: column;
+    }
+
+    .form-control {
+        padding: 6px 10px;
+        width: 100%;
+        font-size: 1rem;
+        border: 1px solid lighten($c_black, 50);
+        border-radius: 4px;
+        box-sizing: border-box;
+        outline: none;
+
+        &--valid {
+            border-color: $c_success;
+        }
+
+        &--invalid {
+            border-color: $c_fail;
+        }
+    }
+
+    .form-button {
+        margin: 10px 0 10px auto;
+        padding: .6rem 1.2rem;
+        color: $c_black;
+        font: 400 .95rem/1.5 $roboto_font;
+        text-shadow: .5px .5px 1px rgba($c_black, .4);
+        cursor: pointer;
+        background-color: rgba($c_white, .8);
+        letter-spacing: .55px;
+        border: none;
+        border-radius: 4px;
+        transition: all .65s ease;
+
+        &:hover {
+            background-color: rgba($c_white, 1);
+        }
+
+        &--primary {
+            color: darken($c_white, 2);
+            background-color: $c_blue;
+
+            &:hover {
+                color: $c_white;
+                background-color: darken($c_blue, 5);
+            }
+        }
+    }
+
+    .form-anchor {
+        margin: 0 0 0 auto;;
+        font: 300 .8rem/1.4 $roboto_font;
+        color: lighten($c_black, 10);
+    }
+}
+
+.validation {
+    display: none;
+    margin: 2px 0 8px;
+    font-size: .8rem;
+    line-height: 1.4;
+
+    &--valid {
+        color: $c_success;
+    }
+
+    &--invalid {
+        color: $c_fail;
+    }
+}
